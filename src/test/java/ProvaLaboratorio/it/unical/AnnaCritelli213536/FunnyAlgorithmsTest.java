@@ -23,11 +23,18 @@ public class FunnyAlgorithmsTest {
 	}
 	
 	@Test
-	public void binarySeachWorks() {
+	public void binarySearchWorks1() {
 		System.out.println("target not found");
 		int nums[] = {1, 2, 3, 4};
 		int target = 5;
 		assertEquals(-1, FunnyAlgorithms.binarySearch(nums, target));
+	}
+	
+	@Test public void binarySearchWorks2() {
+		System.out.println("target found");
+		int nums[] = {1, 2, 3, 4};
+		int target = 2;
+		assertEquals(1, FunnyAlgorithms.binarySearch(nums, target));
 	}
 	
 	

@@ -69,7 +69,9 @@ public class FunnyAlgorithms {
 	 * @return
 	 * @throws UnsupportedOperationException
 	 */
-	public int stringToIntConverter(String number) throws UnsupportedOperationException {
+	public static int stringToIntConverter(String number) throws UnsupportedOperationException {
+		/* funziona solo per numeri positivi... */
+		
 		boolean negativeNumber = false;
 		boolean okNumber = true;
 		int num = 0;
@@ -78,7 +80,7 @@ public class FunnyAlgorithms {
 			negativeNumber = true;
 		}
 		
-		if(!number.matches("[0-9]+") || !number.matches("T(-?[0-9]+)")) {
+		if(!number.matches("[0-9]+") /*|| !number.matches("T(-?[0-9]+)")*/) {
 			okNumber = false;;
 		}
 		

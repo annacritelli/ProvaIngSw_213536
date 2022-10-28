@@ -1,7 +1,6 @@
 package ProvaLaboratorio.it.unical.AnnaCritelli213536;
 
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -30,13 +29,20 @@ public class FunnyAlgorithmsTest {
 		assertEquals(-1, FunnyAlgorithms.binarySearch(nums, target));
 	}
 	
-	@Test public void binarySearchWorks2() {
+	@Test 
+	public void binarySearchWorks2() {
 		System.out.println("target found");
 		int nums[] = {1, 2, 3, 4};
 		int target = 2;
 		assertEquals(1, FunnyAlgorithms.binarySearch(nums, target));
 	}
 	
+	@Test
+	public void stringToIntConverterWorks() {
+		System.out.println("converted");
+		String prova = "11";
+		assertEquals(11, FunnyAlgorithms.stringToIntConverter(prova));
+	}
 	
 	@AfterClass
 	public static void afterClass() {

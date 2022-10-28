@@ -70,8 +70,24 @@ public class FunnyAlgorithms {
 	 * @throws UnsupportedOperationException
 	 */
 	public int stringToIntConverter(String number) throws UnsupportedOperationException {
+		boolean negativeNumber = false;
+		boolean okNumber = true;
+		int num = 0;
 		
-		throw new UnsupportedOperationException("To be implemented");
+		if(number.charAt(0) == '-') {
+			negativeNumber = true;
+		}
+		
+		if(!number.matches("[0-9]+") && !negativeNumber) {
+			okNumber = false;;
+		}
+		
+		if(!negativeNumber && okNumber) {
+			num = Integer.parseInt(number);
+			if(num < -32768 && num > 32767) {
+				return 0;
+			}
+		}
+		return num;
 	}
-
 }

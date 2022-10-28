@@ -10,7 +10,7 @@ public class FunnyAlgorithms {
 	 * @param target Number to be found in the array
 	 * @return Index of target in nums array, -1 otherwise
 	 */
-	public int binarySearch(int[] nums, int target) {
+	public static int binarySearch(int[] nums, int target) {
 		int left = 1, right = nums.length - 2;
 
 		while (left <= right) {
@@ -70,6 +70,7 @@ public class FunnyAlgorithms {
 	 * @throws UnsupportedOperationException
 	 */
 	public int stringToIntConverter(String number) throws UnsupportedOperationException {
+		
 		throw new UnsupportedOperationException("To be implemented");
 	}
 

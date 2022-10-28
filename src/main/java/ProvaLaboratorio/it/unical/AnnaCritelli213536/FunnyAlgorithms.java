@@ -78,13 +78,13 @@ public class FunnyAlgorithms {
 			negativeNumber = true;
 		}
 		
-		if(!number.matches("[0-9]+") && !negativeNumber) {
+		if(!number.matches("[0-9]+") || !number.matches("T(-?[0-9]+)")) {
 			okNumber = false;;
 		}
 		
 		if(!negativeNumber && okNumber) {
 			num = Integer.parseInt(number);
-			if(num < -32768 && num > 32767) {
+			if(num > 32767) {
 				return 0;
 			}
 		}
